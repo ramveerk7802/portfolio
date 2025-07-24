@@ -1,0 +1,13 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.android.application) apply false
+    alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
+    // Correct KSP version (this one is compatible with recent Kotlin versions)
+    id("com.google.devtools.ksp") version "2.2.0-2.0.2" apply false
+
+
+    // Correct Hilt plugin version to match dependencies
+    id("com.google.dagger.hilt.android") version "2.57" apply false
+
+}
